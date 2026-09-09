@@ -1,122 +1,75 @@
-# 🏠 RealEstate Mentor Bot
+# 🏠 Financial Freedom Bot / Бот финансовой свободы
 
-> 🇷🇺 Русская версия | 🇬🇧 English version
+[![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![aiogram](https://img.shields.io/badge/aiogram-3.x-2ca5e0?logo=telegram)](https://docs.aiogram.dev/)
+[![Status](https://img.shields.io/badge/Status-Production-brightgreen)]()
 
----
-
-# 🇷🇺 Русская версия
-
-## ИИ-советник по недвижимости
-
-> Телеграм-бот на русском языке, который заменяет риелтора и финансового консультанта. Он анализирует доход, накопления и помогает выбрать: ипотеку или аренду с инвестициями.
-
-![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
-![Telegram](https://img.shields.io/badge/Telegram-Bot-26A5E4?logo=telegram)
-![AI](https://img.shields.io/badge/LLM-Russian--optimized-green)
+> **Revolutionizing Real Estate Consulting with AI**  
+> **Революционный подход к консультациям по недвижимости с помощью ИИ**
 
 ---
 
-### 📸 Как работает бот — пошагово
+## 📖 English Version
 
-Вот что видит пользователь при общении с ботом:
+### About the Project
+This Telegram bot is your personal AI-powered real estate and financial advisor. Unlike traditional realtors who are often incentivized to close a deal quickly, this bot provides **unbiased, data-driven advice** tailored to your unique financial situation.
 
-#### 1️⃣ Старт
-Бот представляется и объясняет, зачем он нужен.
+**The Core Question it Answers:**  
+Should you buy a house with a mortgage or rent and invest the difference?
 
-![Старт](screenshots/1_start.png)
+### How It Works
+1.  **Income Analysis:** The bot asks for your monthly income (after taxes).
+2.  **Capital Assessment:** It asks about your current savings and available capital.
+3.  **Market Simulation:** Using built-in economic algorithms, it simulates two scenarios over a set period (e.g., 10, 20, or 30 years):
+    *   **Scenario A:** Buying a property with a mortgage (including interest, maintenance, and property tax).
+    *   **Scenario B:** Renting a similar property and investing the initial capital and monthly savings into a diversified portfolio (stocks/bonds).
+4.  **The Verdict:** The bot provides a clear, structured recommendation with numerical projections, helping you make the most financially sound decision for your future.
 
----
+### Why This Bot?
+*   **Transparency:** No hidden fees or sales bias. Purely mathematical logic.
+*   **Education:** It explains *why* a certain path is better, teaching you about the Time Value of Money (TVM) and opportunity cost.
+*   **Accessibility:** Available 24/7 directly in your messenger.
 
-#### 2️⃣ Вопрос о зарплате
-Спрашивает чистый доход для расчёта платёжеспособности.
-
-![Зарплата](screenshots/2_income.png)
-
----
-
-#### 3️⃣ Вопрос о накоплениях
-Узнаёт сумму сбережений для оценки первоначального взноса.
-
-![Накопления](screenshots/3_savings.png)
-
----
-
-#### 4️⃣ Финальный совет
-ИИ выдаёт персонализированную рекомендацию: **ипотека**, **аренда + инвестиции** или **копить дальше**.
-
-![Результат](screenshots/4_result.png)
-
-> 💡 *На этом скриншоте бот рекомендовал «Арендовать + инвестировать», потому что платёж по ипотеке превысил 40% дохода.*
+### Technology Stack
+*   **Core:** Python 3.9+
+*   **Framework:** aiogram 3.x (Asynchronous Telegram Bot API)
+*   **Logic:** Custom-built financial calculators (TVM, DCF models)
+*   **State Management:** FSM (Finite State Machine) for guided user interaction
 
 ---
 
-### 🌟 Идея и миссия
+## 🇷🇺 Русская версия
 
-Большинство людей мучаются с главным финансовым вопросом в жизни: **«Купить квартиру или снимать, а разницу инвестировать?»**
+### О проекте
+Этот Telegram-бот — ваш персональный ИИ-советник по недвижимости и финансам. В отличие от риелторов, которые заинтересованы в быстрой сделке, этот бот даёт **объективные, основанные на данных советы**, учитывающие ваше финансовое положение.
 
-Этот бот — не просто калькулятор. Это **движок принятия решений**, который:
-- Задаёт точные вопросы о доходе, накоплениях и городе.
-- Использует встроенную русскоязычную ИИ-модель.
-- Даёт конкретный совет: **ипотека** или **аренда + инвестиции**.
-- Объясняет логику расчётов простым, человеческим языком.
+**Главный вопрос, на который он отвечает:**  
+Стоит ли покупать квартиру в ипотеку или лучше снимать жильё, а разницу инвестировать?
 
-**Главная цель** — дать человеку дельный совет, как обычный риелтор, но без комиссии, без рекламы и абсолютно бесплатно.
+### Как это работает
+1.  **Анализ дохода:** Бот запрашивает ваш ежемесячный доход (после вычета налогов).
+2.  **Оценка капитала:** Уточняет сумму текущих накоплений и доступного капитала.
+3.  **Рыночное моделирование:** Используя встроенные экономические алгоритмы, бот просчитывает два сценария на заданный период (например, 10, 20 или 30 лет):
+    *   **Сценарий А:** Покупка жилья в ипотеку (с учётом процентов, коммунальных платежей и налогов на недвижимость).
+    *   **Сценарий Б:** Аренда аналогичного жилья и инвестирование начального капитала и ежемесячной экономии в диверсифицированный портфель (акции/облигации).
+4.  **Вердикт:** Бот выдаёт чёткую, структурированную рекомендацию с цифровыми прогнозами, помогая вам принять наиболее выгодное финансовое решение для вашего будущего.
 
----
+### Почему этот бот?
+*   **Прозрачность:** Никаких скрытых комиссий или предвзятости. Только математическая логика.
+*   **Образование:** Он объясняет, *почему* тот или иной путь лучше, обучая вас концепциям временной стоимости денег и альтернативных издержек.
+*   **Доступность:** Работает 24/7 прямо в вашем мессенджере.
 
-### 🧠 Как это работает (суть изобретения)
-
-В отличие от стандартных ипотечных калькуляторов, бот использует **гибридную логику: эвристики + LLM**:
-
-1. **Сбор данных** — бот ведёт структурированный диалог:
-   - Чистый доход в месяц (₽)
-   - Накопления / первоначальный взнос (₽)
-   - Город / регион (для поправки на стоимость жизни)
-   - Текущая арендная плата (₽)
-
-2. **Ядро анализа** — движок рассчитывает:
-   - Максимально допустимый платёж по ипотеке (исходя из правила 40% дохода).
-   - Альтернативные издержки: что будет, если вложить накопления в инвестиции, а не в квартиру.
-   - Прогнозируемый рост цен на недвижимость vs доходность фондового рынка (консервативные оценки).
-
-3. **ИИ-синтез** — встроенная русскоязычная LLM превращает сухие цифры в понятный, эмпатичный и структурированный финансовый план. Бот даёт не просто числа, а **жизненный совет**.
-
-4. **Матрица решений**:
-   - ✅ **«Покупай сейчас»** — если платёж по ипотеке ≈ аренде + 15%, а накоплений хватает на 20% первоначального взноса.
-   - ⚠️ **«Снимай и инвестируй»** — если в твоём городе низкое соотношение цены к аренде или рынок нестабилен.
-   - 🛑 **«Копи дальше»** — если не хватает на взнос или доход нестабильный.
+### Технологический стек
+*   **Ядро:** Python 3.9+
+*   **Фреймворк:** aiogram 3.x (Асинхронное API Telegram)
+*   **Логика:** Собственные финансовые калькуляторы (TVM, DCF модели)
+*   **Управление состояниями:** FSM (Машина состояний) для пошагового взаимодействия
 
 ---
 
-### 📦 Технологический стек
 
-| Компонент | Технология |
-|-----------|------------|
-| **Фреймворк** | `python-telegram-bot` v20+ |
-| **ИИ-ядро** | Кастомная русифицированная LLM (Transformers / Ollama) |
-| **Машина состояний** | Встроенный `ConversationHandler` |
-| **Хранение данных** | SQLite (локально) / PostgreSQL (опционально) |
-| **Деплой** | Docker + NGINX + Gunicorn |
+## 📬 Contact / Контакты
 
----
-
-### 🚀 Быстрый старт (для разработчиков)
-
-```bash
-# 1. Клонируй репозиторий
-git clone https://github.com/yourusername/realestate-mentor-bot.git
-cd realestate-mentor-bot
-
-# 2. Создай виртуальное окружение
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-
-# 3. Установи зависимости
-pip install -r requirements.txt
-
-# 4. Настрой переменные окружения
-echo "BOT_TOKEN=твой_токен_бота" > .env
-echo "AI_MODEL_PATH=./models/ru_advisor" >> .env
-
-# 5. Запусти бота
-python bot.py
+**Author / Автор:** Timyr G. 
+**Email / Почта:** [lilichkag.1979@gmail.com](mailto:lilichkag.1979@gmail.com)  
+**Telegram:** [@hatenoway](https://t.me/hatenoway)
