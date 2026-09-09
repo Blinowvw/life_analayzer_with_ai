@@ -1,115 +1,122 @@
-# 🏠 RealEstate Mentor Bot — AI Financial Advisor for Housing
+# 🏠 RealEstate Mentor Bot
 
-> *Russian-language Telegram bot that replaces a realtor and financial advisor. It analyzes your income, savings, and helps you choose between a mortgage or renting + investing.*
+> 🇷🇺 Русская версия | 🇬🇧 English version
+
+---
+
+# 🇷🇺 Русская версия
+
+## ИИ-советник по недвижимости
+
+> Телеграм-бот на русском языке, который заменяет риелтора и финансового консультанта. Он анализирует доход, накопления и помогает выбрать: ипотеку или аренду с инвестициями.
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
 ![Telegram](https://img.shields.io/badge/Telegram-Bot-26A5E4?logo=telegram)
 ![AI](https://img.shields.io/badge/LLM-Russian--optimized-green)
-![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ---
 
-## 🎯 How It Works — Visual Walkthrough
+### 📸 Как работает бот — пошагово
 
-Here's what the user sees when talking to the bot:
+Вот что видит пользователь при общении с ботом:
 
-### 1️⃣ Start the conversation
-The bot introduces itself and explains its purpose clearly.
+#### 1️⃣ Старт
+Бот представляется и объясняет, зачем он нужен.
 
-![Start Screen](screenshots/1_start.png)
-
----
-
-### 2️⃣ Income question
-It asks for monthly net income to calculate affordability.
-
-![Income Question](screenshots/2_income.png)
+![Старт](screenshots/1_start.png)
 
 ---
 
-### 3️⃣ Savings & Down Payment
-The bot collects your current savings to evaluate the down payment potential.
+#### 2️⃣ Вопрос о зарплате
+Спрашивает чистый доход для расчёта платёжеспособности.
 
-![Savings Question](screenshots/3_savings.png)
-
----
-
-### 4️⃣ Final Recommendation
-The AI generates a personalized financial plan — **buy, rent, or wait**.
-
-![Final Result](screenshots/4_result.png)
-
-> 💡 *In this example, the bot recommended "Rent + Invest" because the mortgage payment exceeded 40% of income.*
+![Зарплата](screenshots/2_income.png)
 
 ---
 
-## 🌟 Concept & Mission
+#### 3️⃣ Вопрос о накоплениях
+Узнаёт сумму сбережений для оценки первоначального взноса.
 
-Most people struggle with the biggest financial decision of their lives: **"Should I buy a home or rent and invest the difference?"**
-
-This bot is not just a calculator. It is a **decision-making engine** that:
-- Asks targeted questions about your monthly income, current savings, and lifestyle.
-- Uses a built-in Russian AI model to simulate financial scenarios.
-- Provides a clear, actionable recommendation: **Mortgage** vs. **Rent + Invest**.
-- Explains the logic behind the advice in plain Russian.
-
-**The goal:** To democratize financial planning and give everyone access to a personal data-driven advisor, completely for free.
+![Накопления](screenshots/3_savings.png)
 
 ---
 
-## 🧠 How It Works (The "Invention")
+#### 4️⃣ Финальный совет
+ИИ выдаёт персонализированную рекомендацию: **ипотека**, **аренда + инвестиции** или **копить дальше**.
 
-Unlike standard mortgage calculators, this bot uses a **proprietary heuristic + LLM hybrid** logic:
+![Результат](screenshots/4_result.png)
 
-1. **Data Collection** — The bot asks in a structured dialogue:
-   - Monthly net income (₽)
-   - Total savings / down payment (₽)
-   - City / Region (for cost-of-living adjustment)
-   - Current monthly rent (₽)
-
-2. **Core Analysis** — The engine calculates:
-   - Maximum affordable mortgage payment (based on the 40% income rule).
-   - Opportunity cost of using savings as a down payment vs. investing it.
-   - Projected property appreciation vs. stock market returns (conservative estimates).
-
-3. **AI Synthesis** — The embedded Russian LLM formats the raw numbers into a human-readable, empathetic, and structured financial plan. It doesn't just give numbers; it gives **life advice**.
-
-4. **Decision Matrix**:
-   - ✅ **"Buy Now"** — if mortgage payment ≈ rent + 15% and savings cover 20% down payment.
-   - ⚠️ **"Rent & Invest"** — if your city has a low price-to-rent ratio or high market uncertainty.
-   - 🛑 **"Wait & Accumulate"** — if you lack sufficient down payment or income stability.
+> 💡 *На этом скриншоте бот рекомендовал «Арендовать + инвестировать», потому что платёж по ипотеке превысил 40% дохода.*
 
 ---
 
-## 📦 Tech Stack
+### 🌟 Идея и миссия
 
-| Component | Technology |
+Большинство людей мучаются с главным финансовым вопросом в жизни: **«Купить квартиру или снимать, а разницу инвестировать?»**
+
+Этот бот — не просто калькулятор. Это **движок принятия решений**, который:
+- Задаёт точные вопросы о доходе, накоплениях и городе.
+- Использует встроенную русскоязычную ИИ-модель.
+- Даёт конкретный совет: **ипотека** или **аренда + инвестиции**.
+- Объясняет логику расчётов простым, человеческим языком.
+
+**Главная цель** — дать человеку дельный совет, как обычный риелтор, но без комиссии, без рекламы и абсолютно бесплатно.
+
+---
+
+### 🧠 Как это работает (суть изобретения)
+
+В отличие от стандартных ипотечных калькуляторов, бот использует **гибридную логику: эвристики + LLM**:
+
+1. **Сбор данных** — бот ведёт структурированный диалог:
+   - Чистый доход в месяц (₽)
+   - Накопления / первоначальный взнос (₽)
+   - Город / регион (для поправки на стоимость жизни)
+   - Текущая арендная плата (₽)
+
+2. **Ядро анализа** — движок рассчитывает:
+   - Максимально допустимый платёж по ипотеке (исходя из правила 40% дохода).
+   - Альтернативные издержки: что будет, если вложить накопления в инвестиции, а не в квартиру.
+   - Прогнозируемый рост цен на недвижимость vs доходность фондового рынка (консервативные оценки).
+
+3. **ИИ-синтез** — встроенная русскоязычная LLM превращает сухие цифры в понятный, эмпатичный и структурированный финансовый план. Бот даёт не просто числа, а **жизненный совет**.
+
+4. **Матрица решений**:
+   - ✅ **«Покупай сейчас»** — если платёж по ипотеке ≈ аренде + 15%, а накоплений хватает на 20% первоначального взноса.
+   - ⚠️ **«Снимай и инвестируй»** — если в твоём городе низкое соотношение цены к аренде или рынок нестабилен.
+   - 🛑 **«Копи дальше»** — если не хватает на взнос или доход нестабильный.
+
+---
+
+### 📦 Технологический стек
+
+| Компонент | Технология |
 |-----------|------------|
-| **Framework** | `python-telegram-bot` v20+ |
-| **AI Core** | Custom Russian fine-tuned LLM (via Transformers / Ollama) |
-| **State Machine** | Built-in `ConversationHandler` |
-| **Data Layer** | SQLite (local) / PostgreSQL (optional) |
-| **Deployment** | Docker + NGINX + Gunicorn |
+| **Фреймворк** | `python-telegram-bot` v20+ |
+| **ИИ-ядро** | Кастомная русифицированная LLM (Transformers / Ollama) |
+| **Машина состояний** | Встроенный `ConversationHandler` |
+| **Хранение данных** | SQLite (локально) / PostgreSQL (опционально) |
+| **Деплой** | Docker + NGINX + Gunicorn |
 
 ---
 
-## 🚀 Quick Start (for Developers)
+### 🚀 Быстрый старт (для разработчиков)
 
 ```bash
-# 1. Clone the repo
+# 1. Клонируй репозиторий
 git clone https://github.com/yourusername/realestate-mentor-bot.git
 cd realestate-mentor-bot
 
-# 2. Create virtual environment
+# 2. Создай виртуальное окружение
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 
-# 3. Install dependencies
+# 3. Установи зависимости
 pip install -r requirements.txt
 
-# 4. Set up environment variables
-echo "BOT_TOKEN=your_telegram_token" > .env
+# 4. Настрой переменные окружения
+echo "BOT_TOKEN=твой_токен_бота" > .env
 echo "AI_MODEL_PATH=./models/ru_advisor" >> .env
 
-# 5. Run the bot
+# 5. Запусти бота
 python bot.py
